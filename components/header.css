@@ -1,0 +1,111 @@
+.home__cont-header{
+    background-color: #13171C;
+    min-width: 375px;
+    height: 114px;
+    display: flex;
+    justify-content: space-between;
+}
+@media (min-width:960px){
+    .home__cont-header{
+        justify-content: space-between;
+    }
+}
+
+.mi-logo{
+    /*
+    revisar y agregar medidas 
+    para mobile y desktop
+    */
+
+}
+
+.home__logo{
+    width: 75px;
+    height: 36px;
+    padding-left: 24px;
+    padding-top: 39px;
+    justify-content: left;
+}
+
+ .home__hamburg-desplegada{
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 100px;
+    right: 100px;
+    padding-left: 100px;
+}
+@media (min-width:960px){
+    .home__hamburg-desplegada{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: right;
+        gap: 60px;
+    }
+}
+
+.home__portfolio, .home__servicios, .home__contacto{
+    font-size: 18px;
+    color: #EEEEEE;
+    font-weight: 400;
+}
+
+.ventana-hamburguesa{
+    margin-right: 40px;
+    margin-top: 35px;
+}
+
+.abre-ventana{
+    background-color: transparent;
+    border: none;
+    color: #EEEEEE;
+    font-size: 35px;
+}
+@media (min-width:960px){
+    .abre-ventana{
+        display: none;
+    }
+
+}
+
+.ventana{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    display: none;
+}
+
+
+.ventana__contenedor-boton{
+    text-align: right;
+}
+
+.ventana__cierra-ventana{
+    margin-top: 40px;
+    margin-right: 40px;
+    background-color: transparent;
+    border: none;
+    color:#eeeeee;
+    font-size: 35px;
+}
+
+
+.ventana__contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 80px;
+}
+
+.ventana__contenido-porfolio, .ventana__contenido-servicios,.ventana__contenido-contacto {
+    font-size: 42px;    
+    font-weight: 500;
+    color: #EEEEEE;
+
+}
