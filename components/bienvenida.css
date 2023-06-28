@@ -1,0 +1,50 @@
+.home__section-uno{
+    min-width: 375px;
+    height: 790px;
+    background-color: #1E1E1E;
+    text-align: center;
+}
+@media (min-width:960px){
+    .home__section-uno{
+        display: flex;
+    }
+}
+
+.home__title{
+        width: 288px;
+        font-size: 60px;
+        font-weight: 700;
+        padding-top: 70px;
+        margin: 0 auto;
+        text-align: center;
+}
+@media (min-width:960px){
+    .home__title{
+        text-align: left;
+        width: auto;
+        font-size: 96px;
+        padding-top: 220px;
+    }
+}
+
+.hola__title{
+    color: #EEEEEE;
+}
+
+.soy__dante_title{
+    color: #00ADB5;
+}
+
+.home__imagen_dante{
+    width: 219px;
+    height: 235px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+@media (min-width:960px){
+    .home__imagen_dante{
+        width: 353px;
+        height: 340px;
+        padding-top: 180px;
+    }
+}

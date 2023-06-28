@@ -1,0 +1,86 @@
+.mis__title{
+    color: #FFFFFF;
+}
+.servicios__title{
+    color: #00ADB5;
+}
+
+.home__card-title{
+    font-size: 33px;
+    font-weight: 700;
+    color: #eeeeee;
+    text-align: center;
+    
+}
+
+.home__container-madre{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+   gap: 20px;
+   
+}
+@media (min-width:960px){
+    .home__container-madre{
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 70px 130px;
+        gap: 45px;
+    }
+}
+
+.home__cont-1,.home__cont-2,.home__cont-3{
+width: 324px;
+height: 525px;
+background-image: url('../imegenes/alimentogato.png');
+background-position: center;
+background:rgba(43, 255, 0, 0.241);
+border-radius: 15px;
+}
+
+.home__card-parrafo{
+    font-size: 16px;
+    font-weight: 400;
+    color: #eeeeee;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.home__compu1{
+    padding-left: 10px;
+    padding-top: 30px;
+    object-fit:cover;
+    display: block;
+    margin: auto;
+}
+.home__compu2{
+    padding-left: 60px;
+    padding-top: 20px;
+    object-fit: cover;
+}
+.home__compu3{
+    padding-top: 40px; 
+    object-fit: cover;
+}
+
+.home__seccion-tres{
+    height: 1903px;
+    min-width: 375px;
+    background-color: #192130;
+    background-image:url('../imagenes/comida_iconos.jpg');
+    background-position: right;
+    
+}
+@media (min-width:960px){
+    .home__seccion-tres{
+        height: 942px;
+    }
+}
+
+.home__card-link{
+    text-align: right;
+    display: block;
+    margin-right: 20px;
+    margin-top: 40px;
+}
