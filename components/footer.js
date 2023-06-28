@@ -26,13 +26,13 @@ function componentFooter(el) {
     </div>
     <div class="home__redes">
       <div class="linkedin">
-        <a href="https://www.linkedin.com/in/pablo-toledo-059908205/"> <img src="./imagenes/linkedin.png" alt="" /></a>
+        <a href="https://www.linkedin.com"> <img src="./imagenes/linkedin.png" alt="" /></a>
       </div>
       <div class="twitter">
-       <a href="https://twitter.com/Pablotoledo8"> <img src="./imagenes/twitter2.png" alt="" /></a>
+       <a href="https://twitter.com"> <img src="./imagenes/twitter2.png" alt="" /></a>
       </div>
       <div class="github">
-      <a href="https://github.com/pablotoledogithub"><img src="./imagenes/github1.png" alt="" /> </a>
+      <a href="https://github.com/xtremonius"><img src="./imagenes/github1.png" alt="" /> </a>
       </div>
     </div>
     <div class="home__copiright">

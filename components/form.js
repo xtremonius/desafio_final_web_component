@@ -1,8 +1,28 @@
-/*
-    Falta la parte del envio de mail por api
+async function envioForm() {
+  const formularioEl = document.querySelector(".home__cont-form");
 
-*/
+  formularioEl.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
+    const nombreForm = formularioEl.querySelector(".home__input-name").value;
+    const mailForm = document.querySelector(".home__input-mail").value;
+    const messageForm = document.querySelector(".home__textarea").value;
+
+    const objData = {
+      to: "alejandro.aquino1988@gmail.com",
+      message: `Nombre: ${nombreForm}, Email: ${mailForm}, Mensaje: ${messageForm}`,
+    };
+
+    const url = "https://apx-api.vercel.app/api/utils/dwf";
+
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(objData),
+    });
+    formularioEl.reset();
+  });
+}
 function componentForm(el) {
   const componentEl = document.createElement("div");
   componentEl.innerHTML = ` <section class="home__seccion-cuatro">
@@ -41,5 +61,5 @@ function componentForm(el) {
   </section>
   `;
   el.appendChild(componentEl);
-  //envioForm();
+  envioForm();
 }

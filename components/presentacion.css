@@ -14,7 +14,7 @@
 .home__cont-titulo-parrafo{
     text-align: left;
     padding-top: 71px;
-    width: 295pc;
+    width: 295px;
     height: 300px;
     margin-left: 150px;
     margin: 0 auto;
@@ -35,15 +35,16 @@
 }
 
 .home__foto-dante{
-    width: 295px;
-    height:350px;
+    width: 200px;
+    height:300px;
     margin: 0 auto;
-    padding-top: 38px;
+    padding-top: 100px;
 }
 @media (min-width:960px){
     .home__foto-dante{
-        width: 695px;
-        height: 900px;
+        width: 400px;
+        height: 200px;
         padding-top: 50px;
+
     }
 }

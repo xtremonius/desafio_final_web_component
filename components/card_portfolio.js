@@ -29,7 +29,7 @@ function getImgEle(item, assets) {
 
 function getWeb() {
   return fetch(
-    "https://cdn.contentful.com/spaces/ewkf9uy59du3/environments/master/entries?access_token=hiizLjDrFrGzLQBeOyrLi_Mir85fQnezXql7-zplpTw&content_type=servicio"
+    "https://cdn.contentful.com/spaces/ewkf9uy59du3/environments/master/entries?access_token=hiizLjDrFrGzLQBeOyrLi_Mir85fQnezXql7-zplpTw&content_type=trabajos"
   )
     .then((res) => {
       return res.json();
@@ -55,7 +55,7 @@ function componentCard(element) {
         <secction class="home__seccion-tres">
             <h2 class="home__seccion-tres-title">
                 <span class="mis__title">Mis</span>
-                <span class="servicios__title">servicios</span>
+                <span class="servicios__title">Trabajos</span>
             </h2>
             <div class="home__container-madre">
                 <template id="cards">

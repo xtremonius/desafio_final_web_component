@@ -1,4 +1,42 @@
-function addPresentacion() {}
+function getImgEl(item, assets) {
+  const id = getImgId(item);
+  const urlImg = assets.filter((asset) => {
+    if (asset["fields"]["file"]["url"].includes(id)) {
+      return asset;
+    }
+  });
+  return urlImg;
+}
+
+function getImgId(item) {
+  const imgId = item["fields"]["image"]["sys"]["id"];
+  return imgId;
+}
+
+function addPresentacionInfo(element, params = {}) {
+  console.log(
+    "info que llega a addPresentacion por parametros: TITULO: ",
+    params.title
+  );
+  console.log(
+    "info que llega a addPresentacion por parametros: DESCRIPCION: ",
+    params.descripcion
+  );
+  const componentE1 = document.createElement("div");
+  componentE1.innerHTML = `
+  <section class="home__seccion-dos">
+      <div class="home__cont-titulo-parrafo">
+        <h2 class="home__title-seccion-dos">${params.title}</h2>
+        <p class="home__parrafo-seccion-dos">${params.descripcion}</p>
+      </div>
+      <div class="home__foto-dante">
+        <img class="foto" src="${params.img}" alt="">
+      </div>
+  </section>
+  `;
+
+  element.appendChild(componentE1);
+}
 
 function getPresentacion() {
   return fetch(
@@ -8,10 +46,19 @@ function getPresentacion() {
       return res.json();
     })
     .then((data) => {
+      console.log("Mostrando data getPresentacion");
+      console.log(data);
+      const assets = data["includes"]["Asset"];
       const fieldPresentacion = data.items.map((item) => {
+        const imgValue = getImgEl(item, assets);
+        console.log("Valor del objeto imgValue");
+        console.log(imgValue);
+        console.log("Valor de la url de imagen: ");
+        console.log(imgValue[0].fields.file.url);
         return {
           title: item.fields.titulo,
           descripcion: item.fields.description.content[0].content[0].value,
+          img: imgValue[0].fields.file.url,
         };
       });
       return fieldPresentacion;

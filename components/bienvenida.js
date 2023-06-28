@@ -1,26 +1,16 @@
-function componentBienvenida(element) {
-  const componentEl = document.createElement("div");
-  componentEl.innerHTML = ` 
-    <section class="home__section-uno">
-        <h1 class="home__title">
-            <span class="hola__title">Hola</span><br/>  
-            <span class="soy__dante_title">soy Dante</span>
-        </h1> 
-        <div class="home__imagen_dante">
-            <img class="dante" src="./imagenes/danti_mobile.png" /> 
-        </div> 
-    </section>
-    `;
-  /*   console.log("Entrando a getBienvenida");
+function getImgId(item) {
+  const imgId = item["fields"]["image"]["sys"]["id"];
+  return imgId;
+}
 
-  const rr = getBienvenida().then(function (e) {
-    const titulo = e[0].title;
-    console.log("Entrando al Title de contentful");
-    console.log(e[0].title);
-    console.log(e[0].name);
-  }); */
-
-  element.appendChild(componentEl);
+function getImgEl(item, assets) {
+  const id = getImgId(item);
+  const urlImg = assets.filter((asset) => {
+    if (asset["fields"]["file"]["url"].includes(id)) {
+      return asset;
+    }
+  });
+  return urlImg;
 }
 
 function getBienvenida() {
@@ -31,10 +21,19 @@ function getBienvenida() {
       return res.json();
     })
     .then((data) => {
+      console.log("Mostrando data getBienvenida");
+      console.log(data);
+      const assets = data["includes"]["Asset"];
       const fieldBienvenida = data.items.map((item) => {
+        const imgValue = getImgEl(item, assets);
+        console.log("Valor del objeto imgValue");
+        console.log(imgValue);
+        console.log("Valor de la url de imagen: ");
+        console.log(imgValue[0].fields.file.url);
         return {
           title: item.fields.title,
           name: item.fields.namePresentation,
+          img: imgValue[0].fields.file.url,
         };
       });
       return fieldBienvenida;
@@ -51,19 +50,10 @@ function addBienvenidaInfo(element, params = {}) {
             <span class="soy__dante_title">${params.name}</span>
         </h1> 
         <div class="home__imagen_dante">
-            <img class="dante" src="./imagenes/danti_mobile.png" /> 
+            <img class="dante" src="${params.img}" /> 
         </div> 
     </section>
     `;
-  /*   console.log("Entrando a getBienvenida");
-
-  const rr = getBienvenida().then(function (e) {
-    const titulo = e[0].title;
-    console.log("Entrando al Title de contentful");
-    console.log(e[0].title);
-    console.log(e[0].name);
-  }); */
-
   element.appendChild(componentEl);
 }
 

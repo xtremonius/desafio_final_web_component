@@ -5,7 +5,9 @@ function main() {
   const component_bienvenida = document.querySelector(".component-bienvenida");
   componentMainBienvenida(component_bienvenida);
 
-  const component_presentacion = document.querySelector(".home__seccion-dos");
+  const component_presentacion = document.querySelector(
+    ".component-home_seccion_dos"
+  );
   componentPresentacion(component_presentacion);
 
   const component_card = document.querySelector(".component-card");

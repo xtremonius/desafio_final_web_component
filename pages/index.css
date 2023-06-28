@@ -7,56 +7,7 @@ body{
     font-family: "Poppins";
 }
 
-/*.home__seccion-dos{
-    background-color: #192130;
-    height: 789px;
-    min-width: 375px;
-}
-@media (min-width:960px){
-    .home__seccion-dos{
-        display: flex;
-        padding-top: 150px;
-        padding-left: 80px;
 
-    }
-}
-
-.home__cont-titulo-parrafo{
-    text-align: left;
-    padding-top: 71px;
-    width: 295pc;
-    height: 300px;
-    margin-left: 150px;
-    margin: 0 auto;
-}
-
-.home__title-seccion-dos{
-    font-size: 42px;
-    font-weight: 700;
-    color: #FFFFFF;
-}
-
-.home__parrafo-seccion-dos{
-    font-size: 18px;
-    font-weight: 400;
-    color: #EEEEEE;
-    padding-top: 29px;
-
-}
-
-.home__foto-dante{
-    width: 295px;
-    height:350px;
-    margin: 0 auto;
-    padding-top: 38px;
-}
-@media (min-width:960px){
-    .home__foto-dante{
-        width: 695px;
-        height: 900px;
-        padding-top: 50px;
-    }
-}*/
 
 .home__seccion-tres-title{
     font-size: 42px;
